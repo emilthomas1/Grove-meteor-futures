@@ -1,5 +1,3 @@
-// counter starts at 0
-Session.setDefault("counter", 0);
 
 Template.hello.helpers({
   result1: function () {
@@ -12,10 +10,8 @@ Template.hello.helpers({
 
 Template.hello.events({
   'click #btn1': function () {
-    // increment the counter when button is clicked
-    // Session.set("counter", Session.get("counter") + 1);
     Meteor.call('buttonClick', function (error, result) {
-      console.log('1:');
+      // console.log('1:');
       if(error) {
         console.log(error);
       } else {
@@ -25,10 +21,8 @@ Template.hello.events({
     });
   },
   'click #btn2': function () {
-    // increment the counter when button is clicked
-    // Session.set("counter", Session.get("counter") + 1);
     Meteor.call('buttonClick2', function (error, result) {
-      console.log('2:');
+      // console.log('2:');
       if(error) {
         console.log(error);
       } else {
